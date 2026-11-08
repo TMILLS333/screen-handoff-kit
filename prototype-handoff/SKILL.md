@@ -41,6 +41,7 @@ Ask all 8 for every screen, and for every state of it (for example in stock, bac
 
 - Specs reference token names, never raw hex or px.
 - Any value with no token goes in a **Values not yet tokenized** table: value, used for, proposed token name. Expect gaps in states (success, error, warning, disabled, focus, stock status), radius and control borders.
+- Scale the table too. For a single screen, list only colors and states the specs use; leave spacing and type sizes as one line ("spacing and type: map to your scale"). A full table is for a flow or a team building a system.
 - If a platform can't read tokens (a vendor form styled from outside), give exact values there and say why.
 - Name who approves new tokens. If nobody owns the system, say so and name who decides for now.
 - If you can't see engineering's coded system: hand over brand values and ask for a mapping back (see the brief).

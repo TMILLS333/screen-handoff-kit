@@ -33,6 +33,18 @@ Run: Nov 8, 2026. Fresh agent, given SKILL.md, the query and the form file. No b
 
 Still passes every criterion.
 
+## Rerun 2, Nov 8: token table scales to the prototype
+
+| | Rerun 1 | Rerun 2 |
+|---|---|---|
+| Token table rows | 20 | 7 (colors and radius); spacing and type as one line |
+| Open questions | 12 | 8, each with a recommendation |
+| Length | about 2,250 words | about 1,750 words (agent's own count) |
+| Named rules | none | NN/g #1, #9; WCAG 1.3.5, 1.4.11, 2.4.3, 3.3.1, 3.3.2, 4.1.3 |
+| Invented rules | none | none |
+
+Still passes every criterion.
+
 ## Watch list
 - **Length.** 18 questions and a 25-row token table for a one-screen form. The 5-line summary helps; consider a rule to scale depth to the size of the prototype.
 - **Over-tokenizing.** It proposed tokens for every padding value. Fine for a team with no system, heavy for one that has one.
