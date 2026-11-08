@@ -2,7 +2,7 @@
 
 A skill that runs a fix pass on a happy-path prototype built by a PM or non-designer, then hands it to engineering: gap report, specs as acceptance criteria, HANDOFF.md and a builder brief for engineering's own AI session.
 
-**Map every screen and interaction.** The prototype shows the happy path. The skill maps the rest: every state, branch and owner. The prototype is a reference; the spec is the contract.
+**Screen Handoff Kit turns happy-path prototypes into engineering requirements, and leaves the missing decisions with the people who own them.** The prototype is a reference; the spec is the contract.
 
 ## Use it
 

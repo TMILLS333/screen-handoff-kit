@@ -50,7 +50,11 @@ Ask all 8 for every screen, and for every state of it (for example in stock, bac
 
 0. **One-screen summary first.** Five lines max: what the prototype covers, the P0s, how many open questions and who owns most of them, what's faked, and the next decision.
 1. **Gap report.** Grouped by area, each item P0 (blocks the requirement or misleads the user), P1 (friction), P2 (polish). When a gap clearly breaks a named rule, name it (for example "WCAG 1.4.11" or "NN/g #1 Visibility of system status"). No usability severity scores: one rater's severity isn't reliable. Lead with what the prototype does and doesn't cover.
-2. **Specs.** One block per screen and state, written as acceptance criteria a PM can paste into a ticket (Given / When / Then). Include the 8 answers.
+2. **Specs.** One block per screen and state, written as acceptance criteria a PM can paste into a ticket (Given / When / Then). Include the 8 answers. Tag each criterion on its own line (one interaction can mix tags), and point to its evidence:
+   - **[Source: where]** stated in requirements, notes or a confirmed answer. Engineering implements it.
+   - **[Observed: where]** the prototype does it; nobody has confirmed it's intended. Engineering verifies before treating it as a requirement. Keep this tag even when the behavior looks reasonable: deciding intent isn't your job.
+   - **[Recommended]** your suggestion. It stays provisional until the owner says yes, even after it lands in HANDOFF.md.
+   - Carry the tags everywhere a criterion is restated (HANDOFF.md logic, builder brief tasks). A rule with no tag reads as approved, so tag it or point to the tagged criterion.
 3. **HANDOFF.md.** Flow and navigation rules, screen specs (link to 2), logic and state, token usage plus the values-not-yet-tokenized table, accessibility, what's faked, dependencies with owners, open questions with owners.
 4. **Builder brief** for engineering's own AI session:
    - What to attach (or one link that holds it all), and an access check: can they open every link?

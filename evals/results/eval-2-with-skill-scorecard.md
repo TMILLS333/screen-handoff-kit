@@ -27,3 +27,19 @@ Criterion 8 asks the output to spec "returning keeps the chosen size." That is i
 - **Responsive.** Neither run mentioned phone width. The eval doesn't test it, so this doesn't prove anything yet.
 - **Contrast ratios** (13.16:1, 5.19:1, etc.) are the agent's own math. Not re-verified.
 - **New catches** not in the baseline: the trumpet's "Dormant now" copy will show out of season; out-of-stock still shown in "Also hungry"; `role="alert"` too assertive; nectar and bloom-light fail contrast on dew.
+
+## Rerun, Nov 8: source tags on every criterion
+
+29 criteria: 2 [Source], 11 [Observed], 16 [Recommended]. Still passes all 9 checks.
+
+| Check | Result |
+|---|---|
+| Source only where the requirement says it | Pass: only "pick a size" and "size and quantity land in the cart" |
+| Observed kept even when reasonable | Pass: min quantity 1, focus ring, max quantity = stock all stay Observed, with evidence |
+| Evidence on every Source and Observed | Pass: points to markup, variation data or the requirement |
+| Recommendations stay provisional | Pass in specs and brief ("build [Recommended] only after the owner approves") |
+| No upgrades in HANDOFF.md | **Slip**: the logic section restated two Recommended rules (A6, B4) as plain logic, untagged |
+
+Fix: SKILL.md now says to carry tags wherever a criterion is restated. Not yet rerun.
+
+Length: about 3,350 words (agent's own count), up from the first run because of per-criterion evidence.
