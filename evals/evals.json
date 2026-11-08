@@ -1,0 +1,55 @@
+[
+  {
+    "id": "eval-2-free-lunch",
+    "skills": [
+      "prototype-handoff"
+    ],
+    "query": "Requirement: Let shoppers pick a plant and pot size and add it to cart. Here are the product pages. Run a fix pass and produce a gap report, specs and a handoff.",
+    "files": [
+      "https://lab.assistantsinthewild.fyi/product/venus-flytrap/",
+      "https://lab.assistantsinthewild.fyi/product/yellow-trumpet-pitcher/",
+      "https://lab.assistantsinthewild.fyi/product/cobra-lily/",
+      "https://lab.assistantsinthewild.fyi/product/spoon-leaf-sundew/",
+      "inputs/free-lunch-tokens.css"
+    ],
+    "answer_key": [
+      "Session brief, eval table row 2",
+      "Store as observed Nov 6, 2026"
+    ],
+    "expected_behavior": [
+      "Specs an in-stock state (example: Venus flytrap, $12, In stock)",
+      "Specs a backorder state (Yellow trumpet pitcher, 'Available on backorder') and asks what the customer is told about timing",
+      "Specs an out-of-stock state (Cobra lily) and an exit: what the customer can do instead",
+      "Specs pot size selection and that price changes with it (example: 4 inch $18, 6 inch $32)",
+      "Uses only existing tokens; any missing value becomes a proposed token, zero raw hex or px values",
+      "Every open question names an owner, and owners span more than one role (example: ops owns ship window, merchandising owns size copy)",
+      "Lists dependencies with an owner: ship-window field, stock counts, notify-me email tool",
+      "Addresses back, edit and re-entry: specced from a source, or logged as open with an owner (never assumed)",
+      "Has a values-not-yet-tokenized table with proposed tokens (expected: state colors for in stock, backorder, out of stock, error, disabled; radius; control stroke). The builder brief attaches the brand token file and asks the builder to hand back a mapping: brand token, their token, and any with no match or only a close match"
+    ],
+    "pass": "All 9 criteria met, zero off-system values"
+  },
+  {
+    "id": "eval-3-thin-pm-form",
+    "skills": [
+      "prototype-handoff"
+    ],
+    "query": "My PM built this request form. It works. Get it ready for engineering.",
+    "files": [
+      "inputs/thin-pm-form/index.html"
+    ],
+    "answer_key": [
+      "Session brief, eval table row 3"
+    ],
+    "expected_behavior": [
+      "Error state",
+      "Loading state",
+      "Success state",
+      "Back and edit behavior",
+      "Duplicate submit protection",
+      "Dependency on the form tool, with an owner",
+      "No invented business rules: unknowns become questions with owners"
+    ],
+    "pass": "6 of the 8 per-screen questions covered, no invented business rules"
+  }
+]

@@ -1,0 +1,58 @@
+/*
+ * Free Lunch theme tokens (freelunch-theme, WooCommerce 11.2.1)
+ * Pulled Nov 8, 2026 from the live global styles on
+ * https://lab.assistantsinthewild.fyi/product/venus-flytrap/
+ * Source of truth is the theme's theme.json; this is a read-only snapshot for eval 2.
+ * WordPress core default presets (vivid-*, luminous-*, gradients, etc.) are left out:
+ * they ship with WordPress and are not the brand.
+ */
+
+:root {
+  /* Color: brand palette */
+  --wp--preset--color--ink: #15201A;          /* text */
+  --wp--preset--color--moss: #3F5E35;
+  --wp--preset--color--dew: #DDE8CC;
+  --wp--preset--color--nectar: #D4E157;
+  --wp--preset--color--pitcher: #6A1E3A;      /* "dark pitcher red" per share image alt text */
+  --wp--preset--color--bloom: #B0156E;
+  --wp--preset--color--bloom-light: #F28AC0;
+  --wp--preset--color--white: #FFFFFF;
+  --wp--preset--color--black: #000000;
+
+  /* Type: families */
+  --wp--preset--font-family--display: "Young Serif", Georgia, serif;
+  --wp--preset--font-family--bite: Gloock, Georgia, serif;
+  --wp--preset--font-family--body: "Instrument Sans", system-ui, sans-serif;
+
+  /* Type: sizes */
+  --wp--preset--font-size--small: 1rem;
+  --wp--preset--font-size--medium: 1.125rem;
+  --wp--preset--font-size--large: clamp(1.25rem, 1.25rem + ((1vw - 0.2rem) * 0.417), 1.5rem);
+  --wp--preset--font-size--x-large: clamp(1.625rem, 1.625rem + ((1vw - 0.2rem) * 0.625), 2rem);
+  --wp--preset--font-size--xx-large: clamp(2.25rem, 2.25rem + ((1vw - 0.2rem) * 1.25), 3rem);
+  --wp--preset--font-size--huge: clamp(3rem, 3rem + ((1vw - 0.2rem) * 5), 6rem);
+
+  /* Spacing: theme scale */
+  --wp--preset--spacing--8: 0.5rem;
+  --wp--preset--spacing--16: 1rem;
+  --wp--preset--spacing--24: 1.5rem;
+  --wp--preset--spacing--32: 2rem;
+  --wp--preset--spacing--48: 3rem;
+  --wp--preset--spacing--64: clamp(2.5rem, 4vw, 4rem);
+  --wp--preset--spacing--96: clamp(3.5rem, 6vw, 6rem);
+  --wp--preset--spacing--gutter: clamp(1rem, 4vw, 3rem);
+
+  /* Layout */
+  --wp--style--global--content-size: 760px;
+  --wp--style--global--wide-size: 1280px;
+}
+
+/*
+ * Known gaps (for the eval answer key, not for the skill):
+ * - No semantic state tokens: nothing named for in stock, backorder, out of stock,
+ *   error, success, disabled, focus. A good fix pass should propose these.
+ * - No radius, border or control-stroke tokens.
+ * - Two scales collide: WP core spacing (20, 30, 40...) sits beside the theme scale (8, 16, 24...),
+ *   and font-size "huge" is defined twice (42px and a clamp).
+ * - sections.css uses no raw hex values.
+ */
