@@ -48,7 +48,7 @@ Ask all 8 for every screen, and for every state of it (for example in stock, bac
 ## 4. Outputs, in this order
 
 0. **One-screen summary first.** Five lines max: what the prototype covers, the P0s, how many open questions and who owns most of them, what's faked, and the next decision.
-1. **Gap report.** Grouped by area, each item P0 (blocks the requirement or misleads the user), P1 (friction), P2 (polish). Lead with what the prototype does and doesn't cover.
+1. **Gap report.** Grouped by area, each item P0 (blocks the requirement or misleads the user), P1 (friction), P2 (polish). When a gap clearly breaks a named rule, name it (for example "WCAG 1.4.11" or "NN/g #1 Visibility of system status"). No usability severity scores: one rater's severity isn't reliable. Lead with what the prototype does and doesn't cover.
 2. **Specs.** One block per screen and state, written as acceptance criteria a PM can paste into a ticket (Given / When / Then). Include the 8 answers.
 3. **HANDOFF.md.** Flow and navigation rules, screen specs (link to 2), logic and state, token usage plus the values-not-yet-tokenized table, accessibility, what's faked, dependencies with owners, open questions with owners.
 4. **Builder brief** for engineering's own AI session:
