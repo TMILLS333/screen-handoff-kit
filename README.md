@@ -2,7 +2,7 @@
 
 A skill that runs a fix pass on a happy-path prototype built by a PM or non-designer, then hands it to engineering: gap report, specs as acceptance criteria, HANDOFF.md and a builder brief for engineering's own AI session.
 
-**The prototype is a reference. The spec is the contract.** Your MVP prototype doesn't need to be complete. It needs to show what's missing. The skill makes that visible, with owners, so a minimum viable prototype is enough to hand off.
+**Map every screen and interaction.** The prototype shows the happy path. The skill maps the rest: every state, branch and owner. The prototype is a reference; the spec is the contract.
 
 ## Use it
 
