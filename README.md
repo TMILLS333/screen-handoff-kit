@@ -41,13 +41,6 @@ These results are directional, not controlled: a small set of runs and reruns sc
 
 Next test: one real engineering handoff. Count the clarification questions engineering sends back and the tasks its builder can't complete.
 
-## Grounding
-
-- [Anthropic: Skill authoring best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices): evals first, concise `SKILL.md`
-- [Impeccable](https://github.com/pbakaus/impeccable) `init`: scan before asking, ask up to 3 questions, record undecided facts instead of inventing them
-- Token handling from a real handoff: one brand token file, a "values not yet tokenized" table, and a builder handback mapping brand tokens to engineering's
-- Usability references by name only (WCAG criteria and NN/g heuristics), without severity scores. [NN/g](https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/) cautions against relying on severity judgments from a single evaluator.
-
 ## Backlog (not v1 blockers)
 
 | Improvement | Next action |
