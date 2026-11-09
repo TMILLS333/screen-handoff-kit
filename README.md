@@ -2,7 +2,7 @@
 
 A convincing prototype can still contain incomplete interactions, accidental behavior, and unresolved decisions.
 
-**Screen Handoff Kit maps screens, states and branches, then prepares the engineering handoff:** a gap report, acceptance criteria, `HANDOFF.md` and a builder brief for engineering's AI session. Every criterion is tagged **Source**, **Observed**, or **Recommended**, so behavior in the prototype doesn't silently become an approved requirement. Open decisions have named owners.
+**Screen Handoff Kit maps screens, states and branches, then prepares the engineering handoff:** a gap report, acceptance criteria, `HANDOFF.md` and a builder brief for engineering's AI session. Every criterion is tagged **Source**, **Observed**, or **Recommended**, so behavior in the prototype doesn't silently become an approved requirement. Unresolved decisions name an owner, or say when no owner has been assigned.
 
 The prototype is a reference. The spec is the contract.
 
@@ -14,7 +14,7 @@ Copy `prototype-handoff/` into your skills folder (Claude Code: `~/.claude/skill
 - Requirements or notes
 - A brand/token source, if available: CSS variables, `theme.json`, `DESIGN.md`, a token export or a repo link
 
-The skill checks the sources first, shows what it will use, and asks up to 3 questions at a time. Everything else becomes an open question with an owner and a recommendation.
+The skill checks the sources first, shows what it will use, and asks up to 3 questions at a time. Unresolved decisions are recorded with owners and recommendations.
 
 ## What it does differently
 
@@ -31,7 +31,7 @@ Inputs, criteria and scorecards are in `evals/`.
 
 ### Evidence limits
 
-These results are directional, not controlled: one run per condition, scored by the skill's author. The Free Lunch baseline was rescored against criteria added after it ran; one criterion was never exercised. The raw v1 output is in `evals/results/raw/`. Earlier runs have scorecards only.
+These results are directional, not controlled: a small set of runs and reruns scored by the skill's author. The Free Lunch baseline was rescored against criteria added after it ran; one criterion was never exercised. The raw v1 output is in `evals/results/raw/`. Earlier runs have scorecards only.
 
 ## Status
 
