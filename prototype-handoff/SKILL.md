@@ -5,7 +5,7 @@ description: Maps screens, interactions, states, and unresolved decisions in a p
 
 # Prototype handoff
 
-The prototype is a reference. The spec is the contract. The job is to map missing interaction behavior and unresolved decisions without inventing requirements.
+Treat the prototype as evidence of what was built. The job is to map missing interaction behavior and unresolved decisions without inventing requirements.
 
 ## 1. Start: gather, confirm, ask
 
@@ -64,3 +64,27 @@ Ask all 8 for every screen, and for every state of it (for example in stock, bac
    - Flag, don't guess: the named open questions.
    - Handback: a list of anything they couldn't do, plus a token mapping (brand token, their token, match / close match / no match).
    - Untested things said out loud.
+
+## 5. How it reads
+
+Two readers. Write for both.
+
+- **People** (PM, designer, owners) read the summary, gap report and open questions. Lead with the status or decision. One fact per line, with its owner. Plain words.
+- **Engineering's AI session** reads the specs and builder brief. Each criterion and task stands on its own: no "see above", every ID followed by a 2 to 4 word label, names and numbers spelled out.
+
+For both:
+- Say what's true and what changed, not how you worked ("re-tagged", "I reviewed").
+- Don't repeat a heading or status in the line under it.
+- Tags stay exactly as in section 4. Plain words never replace a tag.
+- Follow the team's style rules when given (for example, no em-dashes).
+
+Before handing over, check:
+- The status matches what's open. Nothing is "ready" while a P0 is open; name the placeholders.
+- Counts add up and match everywhere they appear.
+- A named rule (WCAG, NN/g) has the right number and threshold, or drop it.
+- If a platform rule already answers an open question, answer it and cite the rule.
+- Anything built on data a P0 gap calls unreliable keeps that gap's tag.
+- The header records the run: skill version, other skills loaded, input type.
+
+Before: "Status is READY FOR BUILD. Approved criteria are re-tagged. 4 questions still open (others answer)."
+After: "Ready for build, with placeholders for 4 open items. Focus areas: Marketing. Clinic phones: no owner yet."
