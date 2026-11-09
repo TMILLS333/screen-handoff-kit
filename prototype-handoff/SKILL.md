@@ -5,7 +5,7 @@ description: Maps screens, interactions, states, and unresolved decisions in a p
 
 # Prototype handoff
 
-The prototype is a reference. The spec is the contract. The job is to make what's missing visible so a thin prototype is enough to hand off, without inventing anything.
+The prototype is a reference. The spec is the contract. The job is to map missing interaction behavior and unresolved decisions without inventing requirements.
 
 ## 1. Start: gather, confirm, ask
 
@@ -22,7 +22,7 @@ If the user is away, take the most reasonable reading, state it at the top, and 
 
 Match the output to the size of the thing. A single screen or form gets a short pass: one spec block, the 8 answers as a list, open questions only where they block the build. A multi-path flow gets per-path specs. Merge states that share the same answers instead of repeating them. Prefer fewer, sharper questions over a long list.
 
-## 2. Fix pass: 8 questions per screen and state
+## 2. Map behavior: 8 questions per screen and state
 
 Ask all 8 for every screen, and for every state of it (for example in stock, backorder, out of stock). Answer each, or write "Doesn't apply, because ..." Never skip silently.
 
