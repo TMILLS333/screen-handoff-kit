@@ -27,7 +27,13 @@
       "Addresses back, edit and re-entry: specced from a source, or logged as open with an owner (never assumed)",
       "Has a values-not-yet-tokenized table with proposed tokens (expected: state colors for in stock, backorder, out of stock, error, disabled; radius; control stroke). The builder brief attaches the brand token file and asks the builder to hand back a mapping: brand token, their token, and any with no match or only a close match"
     ],
-    "pass": "All 9 criteria met, zero off-system values"
+    "pass": "All 9 criteria met, zero off-system values",
+    "token_file_known_gaps": [
+      "No semantic state tokens: nothing named for in stock, backorder, out of stock, error, success, disabled, focus. A good run proposes these.",
+      "No radius, border or control-stroke tokens.",
+      "Two scales collide: WP core spacing (20, 30, 40...) beside the theme scale (8, 16, 24...); font-size 'huge' is defined twice (42px and a clamp).",
+      "sections.css uses no raw hex values."
+    ]
   },
   {
     "id": "eval-3-thin-pm-form",

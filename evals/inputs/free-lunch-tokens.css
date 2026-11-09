@@ -46,13 +46,3 @@
   --wp--style--global--content-size: 760px;
   --wp--style--global--wide-size: 1280px;
 }
-
-/*
- * Known gaps (for the eval answer key, not for the skill):
- * - No semantic state tokens: nothing named for in stock, backorder, out of stock,
- *   error, success, disabled, focus. A good fix pass should propose these.
- * - No radius, border or control-stroke tokens.
- * - Two scales collide: WP core spacing (20, 30, 40...) sits beside the theme scale (8, 16, 24...),
- *   and font-size "huge" is defined twice (42px and a clamp).
- * - sections.css uses no raw hex values.
- */
