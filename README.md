@@ -6,9 +6,7 @@ A convincing prototype can still contain incomplete interactions, accidental beh
 
 ## Who it's for
 
-- **PMs and founders** who built a clickable prototype with AI and need to hand it to engineering
-- **Designers** who want the first pass of the screen-and-state map before the handoff
-- **Engineering leads** who received a prototype and need to know what's decided versus what's just in the mockup
+Anyone working from a prototype that's missing information: whoever built it, whoever received it, before engineering builds from it.
 
 ## Use it
 
@@ -29,7 +27,7 @@ A convincing prototype can still contain incomplete interactions, accidental beh
 The skill checks the sources first, shows what it will use, and asks up to 3 questions at a time. You get a gap report, screen specs, `HANDOFF.md` and a builder brief.
 
 **Pair it with Impeccable**
-Screen Handoff Kit maps behavior and open decisions. It doesn't critique visual design. For a UI review, run [Impeccable](https://github.com/pbakaus/impeccable)'s `critique` alongside it: Impeccable reviews the design; Screen Handoff Kit specs what engineering builds and lists what the team still has to decide.
+Screen Handoff Kit maps behavior and open decisions. It doesn't critique visual design. For a UI review, run [Impeccable](https://github.com/pbakaus/impeccable)'s `critique` alongside it: Impeccable reviews the design. Screen Handoff Kit drafts acceptance criteria and lists the open decisions, each with an owner.
 
 ## Example
 
