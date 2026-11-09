@@ -4,8 +4,6 @@ A convincing prototype can still contain incomplete interactions, accidental beh
 
 **Screen Handoff Kit maps screens, states and branches, then prepares the engineering handoff:** a gap report, acceptance criteria, `HANDOFF.md` and a builder brief for engineering's AI session. Every criterion is tagged **Source**, **Observed**, or **Recommended**, so behavior in the prototype doesn't silently become an approved requirement. Unresolved decisions name an owner, or say when no owner has been assigned.
 
-The prototype is a reference. The spec is the contract.
-
 ## Use it
 
 Copy `prototype-handoff/` into your skills folder (Claude Code: `~/.claude/skills/`), or upload it as a skill in Claude. Provide whatever you have:
