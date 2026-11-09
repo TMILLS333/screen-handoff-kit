@@ -1,44 +1,52 @@
 # screen-handoff-kit
 
-**Screen Handoff Kit turns happy-path prototypes into engineering specifications.** It maps screens, interactions and missing states, then produces a gap report, acceptance criteria and an engineering handoff. Every criterion says whether it's confirmed, observed in the prototype, or a recommendation, and every unresolved decision stays with the person who owns it. The prototype is a reference; the spec is the contract.
+A convincing prototype can still contain incomplete interactions, accidental behavior, and unresolved decisions.
+
+**Screen Handoff Kit maps screens, states and branches, then prepares the engineering handoff:** a gap report, acceptance criteria, `HANDOFF.md` and a builder brief for engineering's AI session. Every criterion is tagged **Source**, **Observed**, or **Recommended**, so behavior in the prototype doesn't silently become an approved requirement. Open decisions have named owners.
+
+The prototype is a reference. The spec is the contract.
 
 ## Use it
 
-Copy `prototype-handoff/` into your skills folder (Claude Code: `~/.claude/skills/`, or upload it as a skill in Claude). Then drop in or point at what you have:
+Copy `prototype-handoff/` into your skills folder (Claude Code: `~/.claude/skills/`), or upload it as a skill in Claude. Provide whatever you have:
 
-- the prototype (files, links, live pages)
-- requirements or notes
-- any brand or token source: CSS variables, theme.json, DESIGN.md, a token export or a repo link
+- Prototype files, links or live pages
+- Requirements or notes
+- A brand/token source, if available: CSS variables, `theme.json`, `DESIGN.md`, a token export or a repo link
 
-It reads what's there, shows what it will use, asks at most 3 questions, and logs everything else as open questions with owners and a recommendation.
+The skill checks the sources first, shows what it will use, and asks up to 3 questions at a time. Everything else becomes an open question with an owner and a recommendation.
 
 ## What it does differently
 
-Evals were written first, run without the skill (baseline), then with it, each in a fresh session.
+The evals were written before the skill. Each case was run in a fresh session, first without the skill and then with it.
 
 | Eval | Input | Without skill | With skill |
 |---|---|---|---|
 | Free Lunch product pages | 4 live WooCommerce pages + theme tokens | 4 of 9 | 8 of 9 (1 partial) |
 | Thin PM form | One-screen demo request form | Fails: invented business rules | Passes all criteria |
 
-Both versions find the big problems. The skill changes three things: **no invented rules, real owners, and untested things said out loud.**
+The baseline runs found major gaps, too. In these cases, the skill kept unapproved behavior separate from requirements, avoided invented business rules, and named who needed to decide.
 
 Inputs, criteria and scorecards are in `evals/`.
 
-**How strong is this evidence?** Directional, not controlled. Each result is one run, scored by the person building the skill. The Free Lunch baseline was rescored against criteria added after it ran (one criterion was never exercised). Raw output is published for the v1 run in `evals/results/raw/`; earlier runs have scorecards only.
+### Evidence limits
+
+These results are directional, not controlled: one run per condition, scored by the skill's author. The Free Lunch baseline was rescored against criteria added after it ran; one criterion was never exercised. The raw v1 output is in `evals/results/raw/`. Earlier runs have scorecards only.
 
 ## Status
 
-**v1.0.0: ready for real-world testing.** Not production-proven.
+**v1.0.0 is ready for real-world testing, not production-proven.**
 
-**Known limitation:** inconsistent coverage of the out-of-stock exit. One Free Lunch run named a next step for the shopper (related plants); the v1 run did not. The cause hasn't been established. The next evidence comes from a real engineering handoff: how many clarification questions come back, and how long the builder's "couldn't do" list is.
+**Known limitation:** coverage of the out-of-stock exit varied between runs. One Free Lunch run suggested related plants as a next step; the v1 run didn't. The cause is unknown.
+
+Next test: one real engineering handoff. Count the clarification questions engineering sends back and the tasks its builder can't complete.
 
 ## Grounding
 
-- [Anthropic: Skill authoring best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices) (evals first, concise SKILL.md)
-- Intake modeled on Impeccable's `init`: scan before asking, at most 3 questions, record undecided facts instead of inventing them
-- Token handling from a real handoff: one brand token file, a "values not yet tokenized" table, and a builder handback that maps brand tokens to engineering's own
-- Usability references by name only (WCAG criteria, NN/g heuristics), no severity scores: [NN/g](https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/) finds one rater's severity too unreliable to trust
+- [Anthropic: Skill authoring best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices): evals first, concise `SKILL.md`
+- [Impeccable](https://github.com/pbakaus/impeccable) `init`: scan before asking, ask up to 3 questions, record undecided facts instead of inventing them
+- Token handling from a real handoff: one brand token file, a "values not yet tokenized" table, and a builder handback mapping brand tokens to engineering's
+- Usability references by name only (WCAG criteria and NN/g heuristics), without severity scores. [NN/g](https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/) cautions against relying on severity judgments from a single evaluator.
 
 ## Backlog (not v1 blockers)
 
