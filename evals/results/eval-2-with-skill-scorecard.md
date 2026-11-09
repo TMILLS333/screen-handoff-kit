@@ -43,3 +43,19 @@ Criterion 8 asks the output to spec "returning keeps the chosen size." That is i
 Fix: SKILL.md now says to carry tags wherever a criterion is restated. Not yet rerun.
 
 Length: about 3,350 words (agent's own count), up from the first run because of per-criterion evidence.
+
+## Regression rerun, Nov 8 (v1 candidate): tags carried everywhere
+
+Raw output: `raw/eval-2-with-skill-v1.md`. 26 criteria: 1 Source, 11 Observed, 14 Recommended.
+
+| Pass condition | Result | Evidence |
+|---|---|---|
+| 1. No lost tags | **Pass** | HANDOFF.md logic table, token table, accessibility list and every builder-brief task carry a tag or point to a tagged criterion |
+| 2. No accidental approvals | **Pass** | Recommended items say "pending Qn"; brief says build them behind a flag or leave a TODO naming the question |
+| 3. Original 9 criteria | **8 of 9, 1 partial** | Criterion 3 (out of stock + exit): AC-D2 keeps sizes visible with no add, but names no next step for the shopper. The previous run had one ("Also hungry" related plants). Likely run-to-run variance; the tag change doesn't touch this area |
+
+Classification spot checks: only the requirement is [Source]; min/max quantity, focus ring and "Clear" stay [Observed] even though they look intended; the backorder ship claim stays [Observed] as copy, and the ship window is never stated as a requirement.
+
+Owners: the run found Tania's name in the theme CSS and used it (7 questions), per the skill's "use names from the sources" rule; engineering lead (assumed) owns 2.
+
+Length: about 4,200 words (agent's count). Not optimized; measure with engineering first.
