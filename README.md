@@ -4,6 +4,12 @@ A convincing prototype can still contain incomplete interactions, accidental beh
 
 **Screen Handoff Kit maps screens, states and branches, then prepares the engineering handoff:** a gap report, acceptance criteria, `HANDOFF.md` and a builder brief for engineering's AI session. Every criterion is tagged **Source**, **Observed**, or **Recommended**, so behavior in the prototype doesn't silently become an approved requirement. Unresolved decisions name an owner, or say when no owner has been assigned.
 
+## Who it's for
+
+- **PMs and founders** who built a clickable prototype with AI and need to hand it to engineering
+- **Designers** who want the first pass of the screen-and-state map before the handoff
+- **Engineering leads** who received a prototype and need to know what's decided versus what's just in the mockup
+
 ## Use it
 
 **Install**
@@ -27,17 +33,26 @@ Screen Handoff Kit maps behavior and open decisions. It doesn't critique visual 
 
 ## Example
 
-> Requirement: let shoppers pick a plant and pot size and add it to cart. Here are the four product pages and our tokens (theme.css). Map the gaps and prepare the handoff.
+You prototyped a plant shop's product pages and want them ready for engineering:
 
-One page sells a plant on backorder. Part of what came back:
+> I built product pages for our plant shop. Shoppers pick a plant and a pot size, then add it to cart. Can you get this ready for engineering? Here are the four pages, and our brand tokens are in theme.css.
 
-> **AC-C1** Given Yellow trumpet pitcher, When the page loads, Then the stock line reads "Available on backorder", both sizes (4" $18, 6" $32) are backorderable, and Add to cart is offered with no quantity maximum.
-> [Observed: stock indicator, variation data]
+The skill starts by saying what it found, then asks only what the pages can't tell it (illustrative, condensed):
+
+> I found four product pages: one in stock, one with a single size, one on backorder, one out of stock. I'll use theme.css for brand values. Three questions first:
+> 1. Is theme.css your full token source?
+> 2. Who approves a new token if one is missing?
+> 3. Can I see engineering's coded design system, or only these brand values?
+
+Then it writes the handoff. Two lines from the backorder page, in plain words:
+
+> When the page loads, the stock line reads "Available on backorder" and Add to cart has no quantity limit.
+> **[Observed]** The prototype does this; nobody has confirmed it's intended.
 >
-> **AC-C3** Given a backorderable size is chosen, When the shopper sees the button, Then a ship-timing note sits next to it using one term throughout, with wording and timing from Q1.
-> [Recommended] No ship window is shown until the owner confirms it.
+> When a shopper picks a backorder size, a ship-timing note sits next to the button.
+> **[Recommended]** No ship date is shown until the owner confirms one.
 
-The page does it, so it's Observed. The skill proposes a fix, so it's Recommended and waits for a yes. No ship date was invented. Full output: [`evals/results/raw/`](evals/results/raw/).
+Nothing gets invented: the ship date stays an open question with an owner. Full output, with the criteria as written: [`evals/results/raw/`](evals/results/raw/).
 
 ## Evidence
 
