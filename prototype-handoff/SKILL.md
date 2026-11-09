@@ -70,7 +70,7 @@ Ask all 8 for every screen, and for every state of it (for example in stock, bac
 Two readers. Write for both.
 
 - **People** (PM, designer, owners) read the summary, gap report and open questions. Lead with the status or decision. One fact per line, with its owner. Plain words.
-- **Engineering's AI session** reads the specs and builder brief. Each criterion and task stands on its own: no "see above", every ID followed by a 2 to 4 word label, names and numbers spelled out.
+- **Engineering's AI session** reads the specs and builder brief. Each criterion and task stands on its own: no "see above", every ID followed by a 2 to 4 word label, names and numbers spelled out. Stand-alone means a reader can act on it, not that it repeats everything: name a thing once in full, then use its labeled ID.
 
 For both:
 - Say what's true and what changed, not how you worked ("re-tagged", "I reviewed").
