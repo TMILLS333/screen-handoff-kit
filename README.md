@@ -67,4 +67,4 @@ The baseline runs found major gaps, too. With the skill, unapproved behavior sta
 
 These results are directional. Each case has one baseline run. The skill was rerun as it changed, three runs per case, and the table shows each case's most recent run. All runs were scored by the skill's author. The Free Lunch baseline was rescored against criteria added after it ran, and one criterion was never exercised. Inputs, scorecards and the raw v1 output are in [`evals/`](evals/).
 
-v1.0.0 is ready for testing. It hasn't been validated in a real engineering handoff yet. The one partial result, the out-of-stock exit, varied between runs; details are in the scorecards.
+v1.0.1 is ready for testing. It hasn't been validated in a real engineering handoff yet. The one partial result, the out-of-stock exit, varied between runs; details are in the scorecards.
