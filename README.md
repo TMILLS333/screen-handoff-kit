@@ -16,37 +16,17 @@ Copy `prototype-handoff/` into your skills folder (Claude Code: `~/.claude/skill
 
 The skill checks the sources first, shows what it will use, and asks up to 3 questions at a time. Unresolved decisions are recorded with owners and recommendations.
 
-## What it does differently
+## Evidence
 
-The evals were written before the skill. Each case was run in a fresh session, first without the skill and then with it.
+The evals were written before the skill. Each case ran in a fresh session, without the skill and then with it.
 
 | Eval | Input | Without skill | With skill |
 |---|---|---|---|
 | Free Lunch product pages | 4 live WooCommerce pages + theme tokens | 4 of 9 | 8 of 9 (1 partial) |
 | Thin PM form | One-screen demo request form | Fails: invented business rules | Passes all criteria |
 
-The baseline runs found major gaps, too. In these cases, the skill kept unapproved behavior separate from requirements, avoided invented business rules, and named who needed to decide.
+The baseline runs found major gaps, too. With the skill, unapproved behavior stayed separate from requirements, no business rules were invented, and the output named who needed to decide.
 
-Inputs, criteria and scorecards are in `evals/`.
+These results are directional. Each case has one baseline run. The skill was rerun as it changed, three runs per case, and the table shows each case's most recent run. All runs were scored by the skill's author. The Free Lunch baseline was rescored against criteria added after it ran, and one criterion was never exercised. Inputs, scorecards and the raw v1 output are in [`evals/`](evals/).
 
-### Evidence limits
-
-These results are directional, not controlled: a small set of runs and reruns scored by the skill's author. The Free Lunch baseline was rescored against criteria added after it ran; one criterion was never exercised. The raw v1 output is in `evals/results/raw/`. Earlier runs have scorecards only.
-
-## Status
-
-**v1.0.0 is ready for real-world testing, not production-proven.**
-
-**Known limitation:** coverage of the out-of-stock exit varied between runs. One Free Lunch run suggested related plants as a next step; the v1 run didn't. The cause is unknown.
-
-Next test: one real engineering handoff. Count the clarification questions engineering sends back and the tasks its builder can't complete.
-
-## Backlog (not v1 blockers)
-
-| Improvement | Next action |
-|---|---|
-| Gap grounding | Eval: does the skill separate confirmed missing, unverified and unspecified behavior? |
-| Broader review language | Rename questions 2 and 3 to "State continuity" and "Entry conditions"; test on a non-web interface (an AI assistant handoff) |
-| Responsive behavior | Build a responsive-specific eval before adding a rule |
-| Real engineering validation | One real handoff: count clarification questions, unresolved work and blockers |
-| Output length | Measure whether engineering finds it too long before cutting |
+v1.0.0 is ready for testing. It hasn't been validated in a real engineering handoff yet. The one partial result, the out-of-stock exit, varied between runs; details are in the scorecards.
