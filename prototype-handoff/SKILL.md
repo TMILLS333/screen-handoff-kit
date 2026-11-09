@@ -1,6 +1,6 @@
 ---
 name: prototype-handoff
-description: Runs a fix pass on a happy-path prototype built by a PM or non-designer, then produces a gap report, per-screen specs as acceptance criteria, HANDOFF.md and a builder brief for engineering's own AI session. Use when someone shares a prototype, product pages, a form or screens and asks to get it ready for engineering, write specs, find gaps, or hand it off.
+description: Maps screens, interactions, states, and unresolved decisions in a prototype. Produces a gap report, source-labeled acceptance criteria, HANDOFF.md, and a builder brief for engineering's AI session. Use when someone needs to identify missing interaction behavior, clarify open decisions, or prepare an engineering handoff without inventing requirements.
 ---
 
 # Prototype handoff
