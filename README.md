@@ -1,8 +1,6 @@
 # screen-handoff-kit
 
-A skill that runs a fix pass on a happy-path prototype built by a PM or non-designer, then hands it to engineering: gap report, specs as acceptance criteria, HANDOFF.md and a builder brief for engineering's own AI session.
-
-**Screen Handoff Kit turns happy-path prototypes into engineering requirements, and leaves the missing decisions with the people who own them.** The prototype is a reference; the spec is the contract.
+**Screen Handoff Kit turns happy-path prototypes into engineering specifications.** It maps screens, interactions and missing states, then produces a gap report, acceptance criteria and an engineering handoff. Every criterion says whether it's confirmed, observed in the prototype, or a recommendation, and every unresolved decision stays with the person who owns it. The prototype is a reference; the spec is the contract.
 
 ## Use it
 
@@ -32,7 +30,9 @@ Inputs, criteria and scorecards for the two public evals are in `evals/`. The th
 
 ## Status
 
-**v1: ready for real-world testing.** Not production-proven. The next evidence comes from a real engineering handoff: how many clarification questions come back, and how long the builder's "couldn't do" list is.
+**v1.0.0: ready for real-world testing.** Not production-proven.
+
+**Known limitation:** inconsistent coverage of the out-of-stock exit. One Free Lunch run named a next step for the shopper (related plants); the v1 run did not. The cause hasn't been established. The next evidence comes from a real engineering handoff: how many clarification questions come back, and how long the builder's "couldn't do" list is.
 
 ## Grounding
 

@@ -52,7 +52,7 @@ Raw output: `raw/eval-2-with-skill-v1.md`. 26 criteria: 1 Source, 11 Observed, 1
 |---|---|---|
 | 1. No lost tags | **Pass** | HANDOFF.md logic table, token table, accessibility list and every builder-brief task carry a tag or point to a tagged criterion |
 | 2. No accidental approvals | **Pass** | Recommended items say "pending Qn"; brief says build them behind a flag or leave a TODO naming the question |
-| 3. Original 9 criteria | **8 of 9, 1 partial** | Criterion 3 (out of stock + exit): AC-D2 keeps sizes visible with no add, but names no next step for the shopper. The previous run had one ("Also hungry" related plants). Likely run-to-run variance; the tag change doesn't touch this area |
+| 3. Original 9 criteria | **8 of 9, 1 partial** | Criterion 3 (out of stock + exit): AC-D2 keeps sizes visible with no add, but names no next step for the shopper. The previous run had one ("Also hungry" related plants). Recorded as inconsistent coverage across runs; cause not established |
 
 Classification spot checks: only the requirement is [Source]; min/max quantity, focus ring and "Clear" stay [Observed] even though they look intended; the backorder ship claim stays [Observed] as copy, and the ship window is never stated as a requirement.
 
