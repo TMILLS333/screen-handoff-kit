@@ -20,11 +20,10 @@ Evals were written first, run without the skill (baseline), then with it, each i
 |---|---|---|---|
 | Free Lunch product pages | 4 live WooCommerce pages + theme tokens | 4 of 9 | 8 of 9 (1 partial) |
 | Thin PM form | One-screen demo request form | Fails: invented business rules | Passes all criteria |
-| A real booking path (private) | 5 entry paths, practitioner-written findings as answer key | Found all findings; invented rules | Found all findings; no invented rules |
 
 Both versions find the big problems. The skill changes three things: **no invented rules, real owners, and untested things said out loud.**
 
-Inputs, criteria and scorecards for the two public evals are in `evals/`. The third eval uses client material and is kept out of this repo.
+Inputs, criteria and scorecards are in `evals/`.
 
 **How strong is this evidence?** Directional, not controlled. Each result is one run, scored by the person building the skill. The Free Lunch baseline was rescored against criteria added after it ran (one criterion was never exercised). Raw output is published for the v1 run in `evals/results/raw/`; earlier runs have scorecards only.
 
